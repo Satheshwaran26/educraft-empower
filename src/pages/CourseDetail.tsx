@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -15,7 +14,7 @@ const courseData = {
     title: "iOS App Development",
     description: "Learn to build beautiful iOS apps with Swift and SwiftUI",
     fullDescription: "Master the art of iOS app development in this comprehensive course. You'll learn Swift programming from the ground up, understand iOS app architecture, and build beautiful user interfaces with SwiftUI. By the end of this course, you'll have created several real-world apps that you can add to your portfolio.",
-    image: "https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1206&q=80",
+    image: "/public/course video.mp4",
     rating: 4.9,
     reviewCount: 1240,
     duration: "8 weeks",
@@ -166,16 +165,11 @@ export default function CourseDetail() {
               </div>
               
               <div className="relative rounded-xl overflow-hidden shadow-xl">
-                <img 
+                <video 
                   src={course.image}
-                  alt={course.title}
                   className="w-full aspect-video object-cover"
+                  controls
                 />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                  <Button size="lg" variant="outline" className="rounded-full h-16 w-16 p-0">
-                    <Play className="h-6 w-6 ml-1" />
-                  </Button>
-                </div>
               </div>
             </div>
           </div>
