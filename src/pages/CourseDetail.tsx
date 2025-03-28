@@ -14,7 +14,7 @@ const courseData = {
     title: "iOS App Development",
     description: "Learn to build beautiful iOS apps with Swift and SwiftUI",
     fullDescription: "Master the art of iOS app development in this comprehensive course. You'll learn Swift programming from the ground up, understand iOS app architecture, and build beautiful user interfaces with SwiftUI. By the end of this course, you'll have created several real-world apps that you can add to your portfolio.",
-    image: "/public/course video.mp4",
+    image: "/videos/course video.mp4",
     rating: 4.9,
     reviewCount: 1240,
     duration: "8 weeks",
@@ -169,7 +169,13 @@ export default function CourseDetail() {
                   src={course.image}
                   className="w-full aspect-video object-cover"
                   controls
-                />
+                  preload="metadata"
+                  controlsList="nodownload"
+                  playsInline
+                >
+                  <source src={course.image} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
