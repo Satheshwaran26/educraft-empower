@@ -27,7 +27,6 @@ export default function Chatbot() {
         "Our most popular course is Web Development. Would you like to learn more?",
         "You can start learning immediately after signing up!"
       ];
-      
       const randomResponse = botResponses[Math.floor(Math.random() * botResponses.length)];
       const botMessage = { id: Date.now() + 1, text: randomResponse, isBot: true };
       setMessages(prev => [...prev, botMessage]);
